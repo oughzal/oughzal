@@ -1,0 +1,14 @@
+Algorithme exercice5v2
+var 
+    N,i,S : entier
+début
+    ecrire("Donner un nombre : ")
+    lire(N)
+    S = 0
+    pour i de N à 1 pas -2 Faire
+        S = S + i
+    FinPour
+
+    Ecrire("La somme est ",S)
+	
+Fin

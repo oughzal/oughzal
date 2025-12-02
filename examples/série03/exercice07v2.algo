@@ -1,0 +1,23 @@
+Algorithme exercice7v2
+var 
+    N,i : entier
+    p : booléen 
+Début
+    Ecrire("Donner un nombre ")
+    lire(N)
+    
+    p = Vrai 
+    i = 2
+    tantque p = vrai et i < N Faire
+    si N mod i = 0 alors
+        p = faux
+    FinSi
+    i = i + 1
+    FinTantque
+    
+    Si p = Vrai alors
+        ecrire(N ," est un nombre premier")
+    sinon
+        ecrire(N ," n'est pas un nombre premier")
+    FinSi
+Fin

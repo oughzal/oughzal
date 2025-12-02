@@ -1,0 +1,10 @@
+Algorithme exercice01
+var i,N : entier
+Début
+    ecrire("Donner un nombre : ")
+    lire(N)
+    
+    pour i de N+1 à N+10 faire
+        ecrireln(i)
+    FinPour
+Fin

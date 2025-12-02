@@ -1,0 +1,13 @@
+Algorithme exrcice6
+var 
+    N,i,F : entier
+Début
+    Ecrire("Donner un nombre entier positif : ")
+    lire(N)
+    
+    F = 1
+    pour i de N à 1 pas -1 Faire
+        F = F*i
+    FinPour
+    ecrire(N,"! = ", F)
+Fin

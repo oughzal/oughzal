@@ -1,0 +1,51 @@
+// Ceci est un commentaire ligne simple avec //
+# Ceci est un commentaire ligne simple avec #
+
+ALGORITHME TestCommentairesConstantes
+
+/* 
+   Ceci est un commentaire
+   multi-lignes
+   sur plusieurs lignes
+*/
+
+// Test des abréviations var et const
+VAR
+    x, y : entier
+    message : chaine
+
+CONST
+    PI : reel = 3.14159
+    MAX_VALEUR : entier = 100
+    APP_NAME : chaine = "Mon Application"
+
+DÉBUT
+    # Initialisation des variables
+    x = 10
+    y = 20
+    
+    /* Test d'affichage 
+       des constantes */
+    ÉCRIRE("=== Test des constantes ===")
+    ÉCRIRE("PI = " + PI)
+    ÉCRIRE("MAX_VALEUR = " + MAX_VALEUR)
+    ÉCRIRE("APP_NAME = " + APP_NAME)
+    
+    // Test de calcul avec constante
+    écrire("Circonférence (rayon 5) = " + (2 * PI * 5))
+    
+    /* Commentaire multi-lignes
+       avec du code dedans qui ne sera pas exécuté
+       x = 999
+       écrire("Ceci ne s'affiche pas")
+    */
+    
+    # Test des variables
+    message = "Variables: x=" + x + ", y=" + y
+    ECRIRE(message)
+    
+    // Tentative de modification d'une constante (devrait échouer)
+    // PI = 3.14  // Décommenter cette ligne pour tester l'erreur
+    
+    écrire("=== Fin du test ===")
+FIN

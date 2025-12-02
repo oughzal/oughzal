@@ -1,0 +1,12 @@
+Algorithme exercice9
+var N,S : entier
+Début
+    ecrire("Donner un nombre : ")
+    lire(N)
+    S = 0
+    tantque N != 0 faire
+        S = S + N % 10
+        N = N div 10
+    FinTantQue 
+    ecrire("La somme est ",S)
+Fin

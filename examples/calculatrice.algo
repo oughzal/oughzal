@@ -1,0 +1,56 @@
+algorithme CalculatriceMathematique
+
+fonction calculerHypotenuse(a : reel, b : reel) : reel
+variables
+    sommeCarres, hypotenuse : reel
+début
+    sommeCarres = puissance(a, 2) + puissance(b, 2)
+    hypotenuse = racine(sommeCarres)
+    retourner hypotenuse
+fin
+
+fonction valeurAbsolue(x : reel) : reel
+début
+    si x < 0 alors
+        retourner abs(x)
+    sinon
+        retourner x
+    finsi
+fin
+
+procédure afficherStatistiques(valeur : reel)
+début
+    écrire("Valeur:", valeur)
+    écrire("Valeur absolue:", abs(valeur))
+    écrire("Arrondi:", arrondi(valeur))
+    écrire("Plancher:", plancher(valeur))
+    écrire("Plafond:", plafond(valeur))
+fin
+
+variables
+    a, b, hyp : reel
+    texte : chaine
+
+début
+    écrire("=== Calculatrice Mathématique ===")
+    
+    // Test du théorème de Pythagore
+    a = 3
+    b = 4
+    hyp = calculerHypotenuse(a, b)
+    écrire("Hypoténuse de triangle (3, 4):", hyp)
+    
+    écrire("")
+    
+    // Test des statistiques
+    afficherStatistiques(-7.6)
+    
+    écrire("")
+    
+    // Test de manipulation de texte
+    texte = "algorithme"
+    écrire("Texte original:", texte)
+    écrire("En majuscules:", majuscule(texte))
+    écrire("Longueur:", longueur(texte))
+    écrire("5 premiers caractères:", sousChaine(texte, 0, 5))
+fin

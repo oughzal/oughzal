@@ -1,0 +1,18 @@
+algorithme TestTableaux
+
+variables
+    nombres : tableau[5] de entier
+    i : entier
+
+début
+    // Initialiser le tableau
+    pour i de 0 à 4 faire
+        nombres[i] = i * 10
+    finpour
+    
+    // Afficher le tableau
+    écrire("Contenu du tableau:")
+    pour i de 0 à 4 faire
+        écrire("nombres[", i, "] =", nombres[i])
+    finpour
+fin

@@ -1,0 +1,16 @@
+Algorithme exercice02
+var N : entier
+Début
+    repeter
+    ecrire("donner un nombre entre 10 et 20 : ")
+    lire(N)
+    Si N >20 alors
+        ecrireln("plus petit")
+    FinSi
+    
+    si N<10 alors
+        ecrireln("plus grand")
+    FinSi
+	
+	jusqua N>=10 et N<=20
+Fin

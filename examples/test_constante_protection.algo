@@ -1,0 +1,17 @@
+ALGORITHME TestProtectionConstante
+
+CONST
+    PI : reel = 3.14159
+
+VAR
+    rayon : entier
+
+DÉBUT
+    rayon = 5
+    ÉCRIRE("PI = " + PI)
+    
+    // Tentative de modification (devrait échouer)
+    PI = 3.14
+    
+    ÉCRIRE("Cette ligne ne devrait pas s'afficher")
+FIN

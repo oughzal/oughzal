@@ -1,0 +1,7 @@
+algorithme test
+var
+    x : entier
+début
+    x = 10
+    écrire(x)
+fin

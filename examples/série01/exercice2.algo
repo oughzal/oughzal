@@ -1,0 +1,17 @@
+Algorithme exercice2
+const
+    TVA = 0.2
+var
+    Qt : Entier
+    PU,TTC : Réel
+Début
+	    //Entrée
+	    Ecrire("Donner le prix unitaire :")
+	    lire(PU)
+	    ecrire("Donner la quantité : ")
+	    lire(Qt)
+	    //traitement
+	    TTC = PU*Qt*(1+TVA)
+	    //sortie
+	    ecrire("TTC = ", TTC)
+Fin

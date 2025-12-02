@@ -1,0 +1,18 @@
+Algorithme exercice11
+var a,b, d : entier
+Début
+    ecrire("Donner  a : ")
+    lire(a)   
+    ecrire("Donner  a : ")
+    lire(b)
+    si a < b alors
+        d = a
+    sinon
+        d = b
+    FinSi
+   tantque a % d !=0 ou b % d !=0 faire
+       d = d - 1
+   FinTantQue  
+   ecrire(a,"/",b," = " , a/d, "/", b/d)
+	
+Fin

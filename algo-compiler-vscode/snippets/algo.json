@@ -1,0 +1,179 @@
+{
+    "Algorithme": {
+        "prefix": "algo",
+        "body": [
+            "algorithme ${1:NomAlgorithme}",
+            "",
+            "variables",
+            "    ${2:variable} : ${3:entier}",
+            "",
+            "début",
+            "    ${4:// Code ici}",
+            "fin"
+        ],
+        "description": "Structure de base d'un algorithme"
+    },
+    "Fonction": {
+        "prefix": "fonction",
+        "body": [
+            "fonction ${1:nom}(${2:param} : ${3:entier}) : ${4:entier}",
+            "début",
+            "    ${5:// Code}",
+            "    retourner ${6:resultat}",
+            "fin"
+        ],
+        "description": "Définir une fonction"
+    },
+    "Procédure": {
+        "prefix": "procedure",
+        "body": [
+            "procédure ${1:nom}(${2:param} : ${3:entier})",
+            "début",
+            "    ${4:// Code}",
+            "fin"
+        ],
+        "description": "Définir une procédure"
+    },
+    "Si Alors": {
+        "prefix": "si",
+        "body": [
+            "si ${1:condition} alors",
+            "    ${2:// Code}",
+            "finsi"
+        ],
+        "description": "Structure conditionnelle si"
+    },
+    "Si Alors Sinon": {
+        "prefix": "sisi",
+        "body": [
+            "si ${1:condition} alors",
+            "    ${2:// Code si vrai}",
+            "sinon",
+            "    ${3:// Code si faux}",
+            "finsi"
+        ],
+        "description": "Structure conditionnelle si-sinon"
+    },
+    "Pour": {
+        "prefix": "pour",
+        "body": [
+            "pour ${1:i} de ${2:0} à ${3:10} faire",
+            "    ${4:// Code}",
+            "finpour"
+        ],
+        "description": "Boucle pour"
+    },
+    "Tantque": {
+        "prefix": "tantque",
+        "body": [
+            "tantque ${1:condition} faire",
+            "    ${2:// Code}",
+            "fintantque"
+        ],
+        "description": "Boucle tantque"
+    },
+    "Repeter": {
+        "prefix": "repeter",
+        "body": [
+            "repeter",
+            "    ${1:// Code}",
+            "jusqua ${2:condition}"
+        ],
+        "description": "Boucle repeter-jusqua"
+    },
+    "Tableau": {
+        "prefix": "tableau",
+        "body": [
+            "${1:tab} : tableau[${2:10}] de ${3:entier}"
+        ],
+        "description": "Déclarer un tableau"
+    },
+    "Ecrire": {
+        "prefix": "ecrire",
+        "body": [
+            "écrire(${1:message})"
+        ],
+        "description": "Afficher un message"
+    },
+    "Ecrireln": {
+        "prefix": "ecrireln",
+        "body": [
+            "écrireln(${1:valeur1}, ${2:valeur2})"
+        ],
+        "description": "Afficher plusieurs valeurs"
+    },
+    "Lire": {
+        "prefix": "lire",
+        "body": [
+            "lire(${1:variable})"
+        ],
+        "description": "Lire une valeur"
+    },
+    "Variables": {
+        "prefix": "var",
+        "body": [
+            "${1:nom} : ${2:entier}"
+        ],
+        "description": "Déclarer une variable"
+    },
+    "Commentaire ligne": {
+        "prefix": "//",
+        "body": [
+            "// ${1:commentaire}"
+        ],
+        "description": "Commentaire sur une ligne"
+    },
+    "Commentaire bloc": {
+        "prefix": "/*",
+        "body": [
+            "/*",
+            " * ${1:commentaire}",
+            " */"
+        ],
+        "description": "Commentaire sur plusieurs lignes"
+    },
+    "Commentaire hash": {
+        "prefix": "#",
+        "body": [
+            "# ${1:commentaire}"
+        ],
+        "description": "Commentaire style Python"
+    },
+    "Variables block": {
+        "prefix": "variables",
+        "body": [
+            "variables",
+            "    ${1:nom} : ${2:entier}"
+        ],
+        "description": "Bloc de déclaration de variables"
+    },
+    "Constantes": {
+        "prefix": "const",
+        "body": [
+            "constantes",
+            "    ${1:NOM} : ${2:entier} = ${3:valeur}"
+        ],
+        "description": "Bloc de déclaration de constantes"
+    },
+    "Constante simple": {
+        "prefix": "constante",
+        "body": [
+            "${1:NOM} : ${2:entier} = ${3:valeur}"
+        ],
+        "description": "Déclarer une constante"
+    },
+    "Division entière": {
+        "prefix": "div",
+        "body": [
+            "${1:a} div ${2:b}"
+        ],
+        "description": "Division entière"
+    },
+    "Modulo": {
+        "prefix": "mod",
+        "body": [
+            "${1:a} mod ${2:b}"
+        ],
+        "description": "Opérateur modulo"
+    }
+}

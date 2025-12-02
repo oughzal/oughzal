@@ -1,0 +1,10 @@
+algorithme exemple
+var
+    a, b, c : entier
+début
+    a = 5
+    ecrireln("donner un nombre:")
+    lire(b)
+    c = a + b
+    ecrireln("la somme de ", a, " et ", b, " est egale a ", c)
+fin

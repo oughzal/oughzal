@@ -1,0 +1,18 @@
+Algorithme Exercice8
+var N,i,S : Entier
+Début
+	ecrire("Donner un nombre positif : ")
+	lire(N)
+	S = 0
+	pour i de 1 à N-1 faire
+	   Si N % i =0  alors
+	        S = S+ i
+	    FinSi
+	FinPour
+	
+	Si N = S alors
+	    ecrire(N, " est un nombre patfait")
+	Sinon
+	    ecrire(N, " n'est pas un nombre patfait")
+	FinSi
+Fin

@@ -1,0 +1,12 @@
+Algorithme exercice4
+var i,N,S :entier
+Début
+    ecrire("Donner N : ")
+    lire(N)
+    
+    S = 0
+    pour i de 1 à N Faire
+        S = S + i^2
+    FinPour
+    ecrireln("La somme est ", S)
+Fin

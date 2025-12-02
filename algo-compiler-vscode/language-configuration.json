@@ -1,0 +1,45 @@
+{
+    "comments": {
+        "lineComment": "//",
+        "blockComment": [ "/*", "*/" ]
+    },
+    "brackets": [
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"],
+        ["pour", "finpour"],
+        ["tantque", "fintantque"],
+        ["si", "finsi"],
+        ["repeter", "jusqua"],
+        ["début", "fin"],
+        ["debut", "fin"],
+        ["fonction", "fin"],
+        ["procedure", "fin"],
+        ["procédure", "fin"]
+    ],
+    "autoClosingPairs": [
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"],
+        ["\"", "\""],
+        ["'", "'"]
+    ],
+    "surroundingPairs": [
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"],
+        ["\"", "\""],
+        ["'", "'"]
+    ],
+    "wordPattern": "(-?\\d*\\.\\d\\w*)|([^\\`\\~\\!\\@\\#\\%\\^\\&\\*\\(\\)\\-\\=\\+\\[\\{\\]\\}\\\\\\|\\;\\:\\'\\\"\\,\\.\\<\\>\\/\\?\\s]+)",
+    "indentationRules": {
+        "increaseIndentPattern": "^((?!\\/\\/).)*(\\{[^}\"'`]*|\\([^)\"'`]*|\\[[^\\]\"'`]*|début|debut|repeter|répéter|faire|alors|sinon|fonction|procedure|procédure)\\s*$",
+        "decreaseIndentPattern": "^((?!.*?\\/\\*).*\\*/)?\\s*([\\}\\]]|fin|finpour|finsi|fintantque|jusqua|jusqu'à|sinon).*$"
+    },
+    "folding": {
+        "markers": {
+            "start": "^\\s*(début|debut|pour|tantque|si|alors|sinon|repeter|répéter|fonction|procedure|procédure)",
+            "end": "^\\s*(fin|finpour|finsi|fintantque|jusqua|jusqu'à)"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+Algorithme Exercice1
+var
+    A,B,tmp : Entier
+Début
+	    // Entrée
+	    Ecrire("Entrez la valeur de A : ")
+	    Lire(A)
+	    Ecrire("Entrez la valeur de B : ")
+	    Lire(B) 
+	    //traitement
+	    tmp = A
+	    A = B
+	    B = tmp
+	    //Sortie
+	    Ecrireln("A=",A," ; B=", B)	    
+Fin

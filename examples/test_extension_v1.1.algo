@@ -1,0 +1,53 @@
+// Commentaire style C/Java
+# Commentaire style Python
+
+ALGORITHME TestNouvellesFonctionnalites
+
+/* 
+   Commentaire multi-lignes
+   pour tester toutes les nouvelles fonctionnalités
+*/
+
+VAR  // Abréviation de VARIABLES
+    nombre, resultat : ENTIER
+    message : CHAINE
+
+CONST  // Abréviation de CONSTANTES
+    PI : reel = 3.14159
+    MAX : entier = 100
+    NOM_APP : chaine = "Test v1.1"
+
+DÉBUT
+    # Initialisation
+    NOMBRE = 17
+    
+    // Test case insensitive
+    ÉCRIRE("=== Test Case Insensitive ===")
+    ecrire("nombre = " + NOMBRE)
+    Ecrire("MAX = " + max)
+    
+    /* Test des nouveaux opérateurs */
+    ÉCRIRE("")
+    écrire("=== Opérateurs DIV et MOD ===")
+    resultat = nombre DIV 5      // Division entière
+    ECRIRE("17 div 5 = " + resultat)
+    
+    resultat = nombre MOD 5       // Modulo
+    écrire("17 mod 5 = " + resultat)
+    
+    resultat = nombre % 5         // Modulo style Python
+    Écrire("17 % 5 = " + resultat)
+    
+    # Test des constantes
+    ÉCRIRE("")
+    Ecrire("=== Constantes ===")
+    ÉCRIRE("PI = " + PI)
+    ecrire("Application: " + NOM_APP)
+    
+    // Tentative de modification (sera une erreur si décommentée)
+    // PI = 3.14  
+    
+    MESSAGE = "Test réussi!"
+    ÉCRIRE("")
+    écrire(message)
+FIN

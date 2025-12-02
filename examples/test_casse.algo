@@ -1,0 +1,30 @@
+ALGORITHME TestCasse
+
+VARIABLES
+    X, Y : ENTIER
+    Message : CHAINE
+
+début
+    X = 10
+    Y = 20
+    
+    ÉCRIRE("Test avec MAJUSCULES")
+    
+    si X < Y alors
+        Écrire("x est plus petit que y")
+    FINSI
+    
+    POUR x DE 1 À 3 FAIRE
+        écrire("Compteur: " + x)
+    finpour
+    
+    TANTQUE y > 15 FAIRE
+        y = y - 5
+        ECRIRE("Y = " + y)
+    FINTANTQUE
+    
+    Message = MAJUSCULE("test")
+    Ecrire("Message en majuscule: " + Message)
+    
+    Ecrire("Racine de 16 = " + RACINE(16))
+FIN

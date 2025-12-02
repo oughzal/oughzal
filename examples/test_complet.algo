@@ -1,0 +1,47 @@
+algorithme TestComplet
+
+fonction maximum(arr : tableau de entier, taille : entier) : entier
+variables
+    i, max : entier
+début
+    max = arr[0]
+    pour i de 1 à taille - 1 faire
+        si arr[i] > max alors
+            max = arr[i]
+        finsi
+    finpour
+    retourner max
+fin
+
+fonction moyenne(arr : tableau de entier, taille : entier) : reel
+variables
+    i, somme : entier
+    moy : reel
+début
+    somme = 0
+    pour i de 0 à taille - 1 faire
+        somme = somme + arr[i]
+    finpour
+    moy = somme / taille
+    retourner moy
+fin
+
+variables
+    notes : tableau[5] de entier
+    i, maxNote : entier
+    moyNote : reel
+
+début
+    écrire("Entrez 5 notes:")
+    
+    pour i de 0 à 4 faire
+        écrire("Note", i + 1, ":")
+        lire(notes[i])
+    finpour
+    
+    maxNote = maximum(notes, 5)
+    moyNote = moyenne(notes, 5)
+    
+    écrire("Note maximale:", maxNote)
+    écrire("Moyenne:", moyNote)
+fin

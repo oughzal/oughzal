@@ -1,0 +1,12 @@
+algorithme NombresPairs
+
+variables
+    i : entier
+
+début
+    écrire("Les 10 premiers nombres pairs:")
+    
+    pour i de 1 à 10 faire
+        écrire(i * 2)
+    finpour
+fin

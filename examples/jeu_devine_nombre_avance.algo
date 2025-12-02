@@ -1,0 +1,86 @@
+algorithme JeuDevineNombreAvance
+
+fonction genererNombreAleatoire(min : entier, max : entier) : entier
+début
+    retourner aleatoire(min, max + 1)
+fin
+
+fonction calculerDifference(a : entier, b : entier) : entier
+début
+    retourner abs(a - b)
+fin
+
+procédure afficherIndice(tentative : entier, cible : entier)
+variables
+    diff : entier
+début
+    diff = calculerDifference(tentative, cible)
+    
+    si diff == 0 alors
+        écrire("🎉 Bravo! C'est exactement ça!")
+    sinon
+        si diff <= 5 alors
+            écrire("🔥 Très chaud! Différence:", diff)
+        sinon
+            si diff <= 10 alors
+                écrire("🌡️ Chaud! Différence:", diff)
+            sinon
+                si diff <= 20 alors
+                    écrire("❄️ Froid! Différence:", diff)
+                sinon
+                    écrire("🧊 Très froid! Différence:", diff)
+                finsi
+            finsi
+        finsi
+        
+        si tentative < cible alors
+            écrire("↑ Le nombre est plus GRAND")
+        sinon
+            écrire("↓ Le nombre est plus PETIT")
+        finsi
+    finsi
+fin
+
+variables
+    nombreSecret, tentative, nbEssais, maxEssais : entier
+    continuer : booleen
+
+début
+    écrire("=================================")
+    écrire("  🎮 JEU: DEVINE LE NOMBRE 🎮  ")
+    écrire("=================================")
+    écrire("")
+    
+    nombreSecret = genererNombreAleatoire(1, 100)
+    maxEssais = 7
+    nbEssais = 0
+    continuer = vrai
+    
+    écrire("J'ai choisi un nombre entre 1 et 100")
+    écrire("Vous avez", maxEssais, "essais pour le deviner!")
+    écrire("")
+    
+    tantque continuer et nbEssais < maxEssais faire
+        nbEssais = nbEssais + 1
+        écrire("Essai", nbEssais, "/", maxEssais)
+        écrire("Votre tentative:")
+        lire(tentative)
+        
+        si tentative == nombreSecret alors
+            afficherIndice(tentative, nombreSecret)
+            écrire("")
+            écrire("✨ Gagné en", nbEssais, "essais! ✨")
+            continuer = faux
+        sinon
+            afficherIndice(tentative, nombreSecret)
+            écrire("")
+        finsi
+    fintantque
+    
+    si continuer alors
+        écrire("😢 Perdu! Le nombre était:", nombreSecret)
+    finsi
+    
+    écrire("")
+    écrire("=================================")
+fin

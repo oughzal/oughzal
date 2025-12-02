@@ -1,0 +1,25 @@
+algorithme DevineNombre
+
+variables
+    secret, essai, tentatives : entier
+
+début
+    secret = 42
+    tentatives = 0
+    
+    répéter
+        écrire("Devinez le nombre:")
+        lire(essai)
+        tentatives = tentatives + 1
+        
+        si essai < secret alors
+            écrire("Trop petit!")
+        sinon
+            si essai > secret alors
+                écrire("Trop grand!")
+            finsi
+        finsi
+    jusqu'à essai == secret
+    
+    écrire("Bravo! Trouvé en", tentatives, "tentatives")
+fin

@@ -1,0 +1,147 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Algorithme",
+    "scopeName": "source.algo",
+    "patterns": [
+        {"include": "#comments"},
+        {"include": "#keywords"},
+        {"include": "#functions"},
+        {"include": "#builtins"},
+        {"include": "#strings"},
+        {"include": "#numbers"},
+        {"include": "#operators"},
+        {"include": "#types"},
+        {"include": "#constants"}
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.algo",
+                    "match": "\\/\\/.*$"
+                },
+                {
+                    "name": "comment.line.hash.algo",
+                    "match": "#.*$"
+                },
+                {
+                    "name": "comment.block.algo",
+                    "begin": "/\\*",
+                    "end": "\\*/"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.algo",
+                    "match": "(?i)\\b(algorithme|début|debut|fin|si|alors|sinon|finsi|pour|de|à|a|faire|finpour|tantque|fintantque|repeter|répéter|jusqua|jusqu'à|retourner)\\b"
+                },
+                {
+                    "name": "keyword.declaration.algo",
+                    "match": "(?i)\\b(variables|var|constantes|const|fonction|procedure|procédure|tableau)\\b"
+                },
+                {
+                    "name": "keyword.operator.logical.algo",
+                    "match": "(?i)\\b(et|ou|non)\\b"
+                }
+            ]
+        },
+        "functions": {
+            "patterns": [
+                {
+                    "match": "\\b([a-zA-ZÀ-ÿ_][a-zA-ZÀ-ÿ0-9_]*)\\s*(?=\\()",
+                    "captures": {
+                        "1": {"name": "entity.name.function.algo"}
+                    }
+                }
+            ]
+        },
+        "builtins": {
+            "patterns": [
+                {
+                    "name": "support.function.builtin.math.algo",
+                    "match": "(?i)\\b(abs|racine|puissance|arrondi|plancher|plafond|sin|cos|tan|log|exp)\\b"
+                },
+                {
+                    "name": "support.function.builtin.string.algo",
+                    "match": "(?i)\\b(longueur|majuscule|minuscule|sousChaine|souschaine)\\b"
+                },
+                {
+                    "name": "support.function.builtin.random.algo",
+                    "match": "(?i)\\b(aleatoire)\\b"
+                },
+                {
+                    "name": "support.function.builtin.io.algo",
+                    "match": "(?i)\\b(écrire|ecrire|écrireln|ecrireln|lire)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.algo",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.algo",
+                            "match": "\\\\."
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.single.algo",
+                    "begin": "'",
+                    "end": "'",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.algo",
+                            "match": "\\\\."
+                        }
+                    ]
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.algo",
+                    "match": "\\b\\d+(\\.\\d+)?\\b"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.assignment.algo",
+                    "match": "="
+                },
+                {
+                    "name": "keyword.operator.comparison.algo",
+                    "match": "(==|!=|<>|<=|>=|<|>)"
+                },
+                {
+                    "name": "keyword.operator.arithmetic.algo",
+                    "match": "(?i)(\\+|\\-|\\*|\\/|%|\\bmod\\b|\\bdiv\\b)"
+                }
+            ]
+        },
+        "types": {
+            "patterns": [
+                {
+                    "name": "storage.type.algo",
+                    "match": "(?i)\\b(entier|reel|réel|chaine|chaîne|booleen|booléen|tableau)\\b"
+                }
+            ]
+        },
+        "constants": {
+            "patterns": [
+                {
+                    "name": "constant.language.boolean.algo",
+                    "match": "(?i)\\b(vrai|faux)\\b"
+                }
+            ]
+        }
+    }
+}

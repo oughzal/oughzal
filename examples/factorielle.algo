@@ -1,0 +1,16 @@
+algorithme Factorielle
+
+variables
+    n, i, resultat : entier
+
+début
+    écrire("Entrez un nombre:")
+    lire(n)
+    
+    resultat = 1
+    pour i de 1 à n faire
+        resultat = resultat * i
+    finpour
+    
+    écrire("Factorielle de", n, "==", resultat)
+fin

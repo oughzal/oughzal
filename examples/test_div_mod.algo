@@ -1,0 +1,49 @@
+ALGORITHME TestOperateursDivMod
+
+VAR
+    a, b, resultat : entier
+    quotient, reste : entier
+
+DÉBUT
+    a = 17
+    b = 5
+    
+    ÉCRIRE("=== Test des opérateurs de division et modulo ===")
+    ÉCRIRE("a = " + a)
+    ÉCRIRE("b = " + b)
+    ÉCRIRE("")
+    
+    // Division normale (réelle)
+    ÉCRIRE("Division normale (/) :")
+    ÉCRIRE("  a / b = " + (a / b))
+    ÉCRIRE("")
+    
+    // Division entière avec mot-clé 'div'
+    ÉCRIRE("Division entière (DIV) :")
+    quotient = a DIV b
+    ÉCRIRE("  a DIV b = " + quotient)
+    ÉCRIRE("")
+    
+    // Modulo avec mot-clé 'mod'
+    ÉCRIRE("Modulo (MOD) :")
+    reste = a MOD b
+    ÉCRIRE("  a MOD b = " + reste)
+    ÉCRIRE("")
+    
+    // Modulo avec opérateur %
+    ÉCRIRE("Modulo style Python (%) :")
+    reste = a % b
+    ÉCRIRE("  a % b = " + reste)
+    ÉCRIRE("")
+    
+    // Vérification
+    ÉCRIRE("Vérification : " + quotient + " * " + b + " + " + reste + " = " + ((quotient * b) + reste))
+    
+    ÉCRIRE("")
+    ÉCRIRE("=== Tests avec nombres négatifs ===")
+    a = -17
+    ÉCRIRE("a = " + a + ", b = " + b)
+    ÉCRIRE("a div b = " + (a div b))
+    ÉCRIRE("a mod b = " + (a mod b))
+    ÉCRIRE("a % b = " + (a % b))
+FIN

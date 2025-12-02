@@ -1,0 +1,38 @@
+algorithme TestFonctions
+
+fonction somme(a : entier, b : entier) : entier
+début
+    retourner a + b
+fin
+
+fonction factorielle(n : entier) : entier
+variables
+    i, resultat : entier
+début
+    resultat = 1
+    pour i de 1 à n faire
+        resultat = resultat * i
+    finpour
+    retourner resultat
+fin
+
+procédure afficherMessage(nom : chaine)
+début
+    écrire("Bonjour", nom, "!")
+fin
+
+variables
+    x, y, sommeXY, fact5 : entier
+
+début
+    x = 5
+    y = 10
+    
+    sommeXY = somme(x, y)
+    écrire("Somme de", x, "et", y, "=", sommeXY)
+    
+    fact5 = factorielle(5)
+    écrire("Factorielle de 5 =", fact5)
+    
+    afficherMessage("Alice")
+fin

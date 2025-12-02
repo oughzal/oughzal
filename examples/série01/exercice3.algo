@@ -1,0 +1,18 @@
+Algorithme Exercice3
+const
+    PI=3.14
+var
+    R,S,P:reel
+Début
+    //Entrée
+	ecrire("Donner la rayon : ")
+	lire(R)
+	
+	//traitement
+	S=PI*R*R
+	P=2*PI*R
+	//sortie
+	ecrireln("S=",S)
+	ecrireln("P=",p)
+	Ecrireln("S=",S, " ; P=",P)
+Fin

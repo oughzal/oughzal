@@ -1,0 +1,47 @@
+algorithme TestFonctionsIntegrees
+
+variables
+    x, y : reel
+    s : chaine
+    n, longueurS : entier
+
+début
+    // Tests des fonctions mathématiques
+    écrire("=== Fonctions mathématiques ===")
+    
+    x = -5.7
+    écrire("abs(-5.7) =", abs(x))
+    
+    x = 16
+    écrire("racine(16) =", racine(x))
+    
+    x = 2
+    y = 8
+    écrire("puissance(2, 8) =", puissance(x, y))
+    
+    x = 3.7
+    écrire("arrondi(3.7) =", arrondi(x))
+    écrire("plancher(3.7) =", plancher(x))
+    écrire("plafond(3.7) =", plafond(x))
+    
+    // Tests des fonctions de chaînes
+    écrire("")
+    écrire("=== Fonctions de chaînes ===")
+    
+    s = "Bonjour"
+    longueurS = longueur(s)
+    écrire("longueur('Bonjour') =", longueurS)
+    
+    écrire("majuscule('Bonjour') =", majuscule(s))
+    écrire("minuscule('Bonjour') =", minuscule(s))
+    
+    écrire("sousChaine('Bonjour', 0, 3) =", sousChaine(s, 0, 3))
+    
+    // Tests de la fonction aléatoire
+    écrire("")
+    écrire("=== Nombres aléatoires ===")
+    
+    écrire("Nombre aléatoire entre 0 et 1:", aleatoire())
+    écrire("Nombre aléatoire entre 0 et 10:", aleatoire(10))
+    écrire("Nombre aléatoire entre 5 et 15:", aleatoire(5, 15))
+fin

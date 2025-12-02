@@ -1,0 +1,18 @@
+Algorithme exercice7v3
+var 
+    N,i : entier
+Début
+    Ecrire("Donner un nombre ")
+    lire(N)
+        
+    i = 2
+    tantque N mod i != 0 et i < N Faire
+        i = i + 1
+    FinTantque
+    
+    Si i = N alors
+        ecrire(N ," est un nombre premier")
+    sinon
+        ecrire(N ," n'est pas un nombre premier")
+    FinSi
+Fin

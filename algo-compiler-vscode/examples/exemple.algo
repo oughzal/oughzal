@@ -1,0 +1,73 @@
+algorithme ExempleComplet
+
+fonction fibonacci(n : entier) : entier
+variables
+    a, b, temp, i : entier
+début
+    si n <= 1 alors
+        retourner n
+    finsi
+    
+    a = 0
+    b = 1
+    pour i de 2 à n faire
+        temp = a + b
+        a = b
+        b = temp
+    finpour
+    retourner b
+fin
+
+procédure afficherTableau(tab : tableau de entier, taille : entier)
+variables
+    i : entier
+    message : chaine
+début
+    message = "[ "
+    pour i de 0 à taille - 1 faire
+        message = message + tab[i] + " "
+    finpour
+    message = message + "]"
+    écrire(message)
+fin
+
+variables
+    n, resultat : entier
+    nombres : tableau[5] de entier
+    i : entier
+
+début
+    écrire("=================================")
+    écrire("  EXEMPLE COMPLET - ALGO COMPILER  ")
+    écrire("=================================")
+    écrire("")
+    
+    // Test de fonction Fibonacci
+    écrire("--- Suite de Fibonacci ---")
+    pour i de 0 à 10 faire
+        resultat = fibonacci(i)
+        écrire("F(" + i + ") = " + resultat)
+    finpour
+    
+    écrire("")
+    
+    // Test de tableau
+    écrire("--- Tableau de nombres ---")
+    pour i de 0 à 4 faire
+        nombres[i] = puissance(2, i)
+    finpour
+    
+    afficherTableau(nombres, 5)
+    
+    écrire("")
+    
+    // Test de fonctions intégrées
+    écrire("--- Fonctions intégrées ---")
+    écrire("abs(-42) = " + abs(-42))
+    écrire("racine(144) = " + racine(144))
+    écrire("majuscule('algo') = " + majuscule("algo"))
+    écrire("Nombre aléatoire: " + aleatoire(1, 100))
+    
+    écrire("")
+    écrire("=================================")
+fin

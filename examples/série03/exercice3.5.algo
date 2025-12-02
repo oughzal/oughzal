@@ -1,0 +1,12 @@
+Algorithme exercice3_5
+var N,i,U : entier
+Début
+	ecrire("Donner N : ")
+	lire(N)
+	
+	U = 1 // U = U0
+	pour i de 1 à N Faire
+		U = 4*U + 6
+	FinPour
+	ecrireln("U",N," = ", U)
+Fin

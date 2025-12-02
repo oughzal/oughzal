@@ -1,0 +1,22 @@
+algorithme exercice05
+var 
+    N,i,S : entier
+début
+    ecrire("Donner un nombre : ")
+    lire(N)
+    S = 0
+    Si N mod 2 == 0 alors
+        pour i de 2 à N faire 
+            Si i mod 2 == 0 alors
+                s = s + i
+            FinSi
+        FinPour
+    sinon 
+        pour i de 1 à N faire 
+            Si i mod 2 == 1 alors
+                s = s + i
+            FinSi
+        FinPour 
+    FinSi 
+    ecrire("La somme est ",S)  
+fin

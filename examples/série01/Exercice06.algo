@@ -1,0 +1,22 @@
+Algorithme Exercice6
+var
+    x,y,s,st,p,d : réel
+Début
+
+    //Entrée
+     Ecrire("Donner x : ")
+     Lire(x)
+     Ecrire("Donner y : ")
+     Lire(y)
+    //Traitement
+    s = x+y
+    st = x-y
+    p=x*y
+    d=x/y
+    //Sortie
+    Ecrireln(x,"+",y,"=",s)
+    Ecrireln(x,"-", y ,"=",st)
+    Ecrireln(x,"*",y,"=",p)
+    Ecrireln(x,"/",y,"=",d)
+	
+Fin

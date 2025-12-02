@@ -1,0 +1,18 @@
+Algorithme Exercice7
+var
+    T,H,M,S : Entier
+Début
+	    //Entrée
+	    Ecrire("Donner le temps T : ")
+	    Lire(T)
+	    
+	    //Traitement
+	    H = T div 3600
+	    T = T mod 3600
+	    //T  = T - H*3600
+	    M = T div 60
+	    S = T mod 60
+	    
+	    //Sortie
+	    Ecrire(H,":",M,":",S)
+Fin

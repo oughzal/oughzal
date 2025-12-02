@@ -1,0 +1,162 @@
+{
+    "name": "algo-compiler",
+    "displayName": "Algo Compiler",
+    "description": "Extension VS Code pour le compilateur Algo - Édition, coloration syntaxique et exécution de programmes en pseudocode",
+    "version": "1.2.0",
+    "icon": "images/icon.png",
+    "publisher": "algo-compiler",
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets"
+    ],
+    "keywords": [
+        "algorithme",
+        "pseudocode",
+        "algo",
+        "français",
+        "compiler"
+    ],
+    "activationEvents": [
+        "onLanguage:algo",
+        "onCommand:algo-compiler.run",
+        "onCommand:algo-compiler.build"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "languages": [
+            {
+                "id": "algo",
+                "aliases": [
+                    "Algorithme",
+                    "algo"
+                ],
+                "extensions": [
+                    ".algo",
+                    ".alg"
+                ],
+                "configuration": "./language-configuration.json",
+                "icon": {
+                    "light": "./images/icon.png",
+                    "dark": "./images/icon.png"
+                }
+            }
+        ],
+        "grammars": [
+            {
+                "language": "algo",
+                "scopeName": "source.algo",
+                "path": "./syntaxes/algo.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "algo",
+                "path": "./snippets/algo.json"
+            }
+        ],
+        "commands": [
+            {
+                "command": "algo-compiler.run",
+                "title": "Exécuter le fichier Algo",
+                "category": "Algo",
+                "icon": "$(run)"
+            },
+            {
+                "command": "algo-compiler.build",
+                "title": "Compiler le fichier Algo",
+                "category": "Algo",
+                "icon": "$(gear)"
+            }
+        ],
+        "menus": {
+            "editor/title/run": [
+                {
+                    "command": "algo-compiler.run",
+                    "when": "resourceLangId == algo",
+                    "group": "navigation"
+                }
+            ],
+            "editor/context": [
+                {
+                    "command": "algo-compiler.run",
+                    "when": "resourceLangId == algo",
+                    "group": "navigation"
+                },
+                {
+                    "command": "algo-compiler.build",
+                    "when": "resourceLangId == algo",
+                    "group": "navigation"
+                }
+            ],
+            "commandPalette": [
+                {
+                    "command": "algo-compiler.run",
+                    "when": "resourceLangId == algo"
+                },
+                {
+                    "command": "algo-compiler.build",
+                    "when": "resourceLangId == algo"
+                }
+            ]
+        },
+        "keybindings": [
+            {
+                "command": "algo-compiler.run",
+                "key": "ctrl+shift+r",
+                "mac": "cmd+shift+r",
+                "when": "resourceLangId == algo"
+            }
+        ],
+        "configuration": {
+            "title": "Algo Compiler",
+            "properties": {
+                "algoCompiler.compilerPath": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Chemin vers le JAR du compilateur Algo (laisser vide pour auto-détection)"
+                },
+                "algoCompiler.javaPath": {
+                    "type": "string",
+                    "default": "java",
+                    "description": "Chemin vers l'exécutable Java"
+                },
+                "algoCompiler.clearOutputBeforeRun": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Effacer la console avant chaque exécution"
+                },
+                "algoCompiler.showExecutionTime": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Afficher le temps d'exécution"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "test": "node ./out/test/runTest.js",
+        "package": "vsce package"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.75.0",
+        "@types/node": "16.x",
+        "@typescript-eslint/eslint-plugin": "^5.45.0",
+        "@typescript-eslint/parser": "^5.45.0",
+        "eslint": "^8.28.0",
+        "typescript": "^4.9.3",
+        "@vscode/vsce": "^2.19.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yourusername/algo-compiler-vscode.git"
+    },
+    "license": "MIT"
+}
