@@ -1,0 +1,90 @@
+ALGORITHME ExempleComplet
+    // Déclarations de variables de différents types
+    VARIABLES
+        a : ENTIER
+        r : REEL
+        s : CHAINE
+        b : BOOLEEN
+        tab[10] : ENTIER
+        i, j, somme : ENTIER
+    
+    DEBUT
+        // Affectations
+        entier <- 42
+        r <- 3.14
+        chaine <- "Bonjour"
+        booleen <- VRAI
+        
+        // Opérations arithmétiques
+        somme <- a + 10
+        somme <- somme - 5
+        somme <- somme * 2
+        somme <- somme / 3
+        somme <- somme MOD 7
+        
+        // Entrées/Sorties
+        ECRIRE("Entrez un nombre : ")
+        LIRE(a)
+        ECRIRE("Vous avez saisi : ", a)
+        
+        // Structure conditionnelle SI
+        SI a > 0 ALORS
+            ECRIRE("Nombre positif")
+        SINON SI a < 0 ALORS
+            ECRIRE("Nombre négatif")
+        SINON
+            ECRIRE("Nombre nul")
+        FIN SI
+        
+        // Opérateurs logiques
+        SI (entier > 0) ET (entier < 100) ALORS
+            ECRIRE("Entre 0 et 100")
+        FIN SI
+        
+        SI (entier < 0) OU (entier > 100) ALORS
+            ECRIRE("Hors limites")
+        FIN SI
+        
+        SI NON booleen ALORS
+            ECRIRE("Faux")
+        FIN SI
+        
+        // Boucle POUR
+        POUR i DE 1 A 10 FAIRE
+            tab[i] <- i * 2
+            ECRIRE("tab[", i, "] = ", tab[i])
+        FIN POUR
+        
+        // Boucle TANT QUE
+        j <- 1
+        TANT QUE j <= 5 FAIRE
+            ECRIRE("Itération : ", j)
+            j <- j + 1
+        FIN TANT QUE
+        
+        // Boucle REPETER JUSQU'A
+        j <- 5
+        REPETER
+            ECRIRE("Décompte : ", j)
+            j <- j - 1
+        JUSQU'A j = 0
+        
+        // Opérateurs de comparaison
+        SI entier = 42 ALORS
+            ECRIRE("Égal à 42")
+        FIN SI
+        
+        SI entier <> 0 ALORS
+            ECRIRE("Différent de 0")
+        FIN SI
+        
+        SI entier >= 10 ALORS
+            ECRIRE("Supérieur ou égal à 10")
+        FIN SI
+        
+        SI entier <= 100 ALORS
+            ECRIRE("Inférieur ou égal à 100")
+        FIN SI
+        
+    FIN
+FIN
